@@ -4,32 +4,126 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="https://vitejs.dev/logo.svg" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 </head>
 
 <body class="flex h-screen">
   <div class="m-auto" x-data="{ count: 0 }">
-    <div class="flex gap-2">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="https://vitejs.dev/logo.svg" class="h-10" alt="Vite logo" />
-      </a>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAAC6CAMAAAAu0KfDAAAAdVBMVEX33x4AAAD/5h/HtBi6qBcZFgMxLAb/6iD85B//6B+FeBD64R7/7SD03R4vKgbPuxmklBTgyhtxZg40Lwbs1R3m0BwgHQRLQwl6bg+unRXVwBo9NwcdGgSXiBJSSgqMfxEmIwRqYA0KCQFaUgtkWgwSEQJEPgjaH22TAAAGDUlEQVR4nO2b61azOhBACUFJCNcWLAT5erH6/o94oGpLSUKC0NCz1uy/WtyOk5CZjI4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwP4O51P+GuoStpkH8IWT0+5kb0gJXzT4oy6BJvSQKNZ94FITvgwHJiAnzCS638dsn+ub0cnjd7blPV4g9wQc0wHMV38tIxDfD7/6myRzroSf4dWDxolInES7l4l34A247683VaRZ8Sq1/iJvIbuCN1UOvHhPv2GT0GdX9VCfesk1Uy2Q9dcb2BuYt2GLcDaPemJkjlNhzN1In3oupes2t5YyJOsvfTc0ROua29hkT9XBnbo7Q3tb2bqBOvSnm7VK1FHa9OnP+TVPf5c+iTr23aepxYSdl9OokkAoejuXmS/aFsrAibqBOuGSRvjVOSLtyIwvi+698JeHTLFPXOwnmx8L/8SNh8dH7wmvA7B0FtOpMPLyc+1s3cW4JdcY2Sw6teiSmenb/u0W/p/jK2tvISJ3lRyHo4eAR+WX3/Cos1xpa9UJYpcLb1uUv6LXybZenWvVsK+SLkBbhvrRbZVzQR91AneWWa7sLf4g6FzVXaSPpoy68MlN/DVER/Q5zHqpvQ+XTrKJXF5tGnv0lKUP/ShIL6i1/Cnf98asS1FGdPEO669WxrKRu1mxOX810x6/sQ6KOapyvLf/nUgMdvWKlxvqv2IwC75yuKm/QEWDSOu47bYIiXE1+djNjlzC2TtIbtZDUYb/IewVZI/Qm6oSL5em9fJqtcJlk1i7VNtf/Nbn1t5SR+q38VBOnthesWX+dOHp3dErsrlfDqwFiEHeEgsxeF8b8LqnfblHzz7OY8cY3eMxJNftMx3tjrzFgfm/KCNdeP7aU1hJ+wm2149K9cCsvsoksuU9Rd1iYlPpme2nJfZK6Zk7gl8BO3T1RvZPnQo9gCLayz0xW79ZrVo4OOqC6sPFi/YN6l/NRsxuzL59WvZtGyquNWn47Nsm0snorT/Nkr5RvHu3tzFDvct7JVAMbOwsXkDPUnS70kSLy+NnVuxWbHWU9JguTAnPV2+OBU0mOB18P8u0xX73NeSwJe/QY3x4LqDsOlbRUs4dnzCLqTigOb/zhKRMxLzXGuqOSlEmX7cFLfjjBsZE6jVLJ9df1wYWg3ix5BCO+5CBNvOH28C4bFqT4iEr1RR0rhAJqv6C6n38F4h/R9YavlDcsqPv55bxSqWsQ8U57MXVG8gahWBzLokJj6zBIDEainynHd+WhihXC1r5UwriRdwmLpG4UTiGD+Sc3967d0p2qz0K4kOvVIsuU+fw69zGIGyuE65Ytu/so7l8+fuRyd1+s+sS0+wPUaa6L6G0QN8mu9nWrLJkflfeZcJaOMVAx6GiBo2Mbt/7q/7yb7pcNApbXJGUsHe6cqE5cwckVMx2h+eKsGNw2x9mtj09kV1zXu2jJeEBHUNy9ndpTu/BqaDnPNi9SYRx3W2WUuoS4NOKyPuJtJUfyf8w4pEnudk/onkFzHMgaeuncfJH3Zz/2Fca4asrhGaDj9bapkUQSzov8sX1CwjPePmQjHVU+8dmprriOeIlfY8V0dNNbx0zd3T3F27rexqri9JjPVVdcNY/R3xlYNPnjP6hfvMbQyqCz3Ce4KxEonzC53uM8O+jd7mdyG3HjMHjX+5IiQs/LIhMzJB/vsQ0Ihp93jf9Lo0e5TJnhJhN+Zi1M0zHxkKNnqZmNCUP/J8lVEJsc99Ny87GkMl1rjawxzvx00uz9dqSamgpzKrN83ysWV+hN+JeH3YLm3THDKN8bZQHnZiY3jxc2S1+dkkIbt09vZHEx+QSYSLr8VBXzq9HJkPdzNF6QkTCtdWkXl4+ZcfDzRhn5w9Gj2gylTrUZuzjdBfxR173Mz6pAmC1G3UAIjkzefm3NlKQb+WGyDir+yDkwQqIsac79v3tdVrwtHQwfwAjJM5wOgl9v0iSLHj6IxLpBrfYX8Fowz9s9ZbQhJ39A+4GCY6+qqsszut/I3mBAV964cwZEGXHbR8x7BgAAAAAAAPA4/gMhkFZhpB+AswAAAABJRU5ErkJggg==" class="h-10" alt="JavaScript logo" />
-      </a>
-      <a href="https://tailwindcss.com" target="_blank">
-        <img src="https://tailwindcss.com/favicons/favicon-32x32.png?v=3" class="h-10" alt="Vite logo" />
-      </a>
-      <a href="https://alpinejs.dev" target="_blank">
-        <img src="https://alpinejs.dev/favicon.png" class="h-10" alt="Alpine JS logo" />
-      </a>
-    </div>
+
     <div class="mt-4 text-center">
       <span x-text="count" class="text-3xl"></span>
       <div class="flex justify-between mt-4">
-        <button x-on:click="count--" class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-1 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800">Decrement</button>
-        <button x-on:click="count++" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Increment</button>
+        <button x-on:click="count--"
+          class="px-2 py-1 mb-2 text-sm font-medium text-center text-red-700 border border-red-700 rounded-lg hover:text-white hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 me-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-500 dark:focus:ring-red-800">Decrement</button>
+        <button x-on:click="count++"
+          class="px-2 py-1 mb-2 text-sm font-medium text-center text-blue-700 border border-blue-700 rounded-lg hover:text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 me-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Increment</button>
       </div>
+
+      <form>
+        <div class="space-y-12 sm:space-y-16">
+
+
+          <div>
+            <h2 class="text-base font-semibold leading-7 text-gray-900">Some real fuckery is about to happen</h2>
+            <p class="max-w-2xl mt-1 text-sm leading-6 text-gray-600">Tempor elit elit nisi labore ex. Ad magna anim
+              duis exercitation.</p>
+
+            <div
+              class="pb-12 mt-10 space-y-8 border-b border-gray-900/10 sm:space-y-0 sm:divide-y sm:divide-gray-900/10 sm:border-t sm:pb-0">
+
+
+
+
+
+              <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:py-6">
+                <label for="sorting" class="block text-sm font-medium leading-6 text-gray-900 sm:pt-1.5">Sorting</label>
+                <div class="mt-2 sm:col-span-2 sm:mt-0">
+                  <select id="sorting" name="sorting" class=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset
+                    ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm
+                    sm:leading-6">
+                    <option>By quality then seeders</option>
+                    <option>By quality then size</option>
+                    <option>By seeders</option>
+                    <option>By size</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:py-6">
+                <label for="sorting" class="block text-sm font-medium leading-6 text-gray-900 sm:pt-1.5">Sorting</label>
+                <div class="mt-2 sm:col-span-2 sm:mt-0">
+                  <select id="sorting" name="sorting" class=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset
+                    ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm
+                    sm:leading-6">
+                    <option>By quality then seeders</option>
+                    <option>By quality then size</option>
+                    <option>By seeders</option>
+                    <option>By size</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:py-6">
+                <label for="languages" class="block text-sm font-medium leading-6 text-gray-900 sm:pt-1.5">Priority
+                  forign language</label>
+                <div x-data="{
+                  options: [],
+                  open: false,
+                  filter: ''
+              }" class="relative w-full">
+                  <div @click="open = !open"
+                    class="flex w-full h-12 gap-2 p-3 truncate bg-white border rounded-lg cursor-pointer border-neutral-300"
+                    x-text="options.length + ' items selected'">
+                  </div>
+                  <div class="absolute flex flex-col w-full gap-3 p-3 mt-3 bg-white rounded-lg shadow-lg x-50"
+                    x-show="open" x-trap="open" @click.outside="open = false" @keydown.escape.window="open = false"
+                    x-transition:enter=" ease-[cubic-bezier(.3,2.3,.6,1)] duration-200"
+                    x-transition:enter-start="!opacity-0 !mt-0" x-transition:enter-end="!opacity-1 !mt-3"
+                    x-transition:leave=" ease-out duration-200" x-transition:leave-start="!opacity-1 !mt-3"
+                    x-transition:leave-end="!opacity-0 !mt-0">
+                    <input x-model="filter" placeholder="filter" class="p-3 pt-0 -mx-3 border-b outline-none"
+                      type="text">
+                    <p x-show="! $el.parentNode.innerText.toLowerCase().includes(filter.toLowerCase())"
+                      class="text-2xl text-center text-neutral-400 font-bolc">
+                      –
+                    </p>
+                    <div x-show="$el.innerText.toLowerCase().includes(filter.toLowerCase())" class="flex items-center">
+                      <input x-model="options" id="english" type="checkbox" value="English"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                      <label for="english" class="flex-grow ml-2 text-sm font-medium text-gray-900">Englis</label>
+                    </div>
+                    <div x-show="$el.innerText.toLowerCase().includes(filter.toLowerCase())" class="flex items-center">
+                      <input x-model="options" id="spanish" type="checkbox" value="spanish"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                      <label for="spanish" class="flex-grow ml-2 text-sm font-medium text-gray-900">Spanish</label>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:py-6">
+                <label for="sizeLimit" class="block text-sm font-medium leading-6 text-gray-900 sm:pt-1.5">Video size
+                  limit</label>
+                <div class="mt-2 sm:col-span-2 sm:mt-0">
+                  <input type="text" name="sizeLimit" id="sizeLimit" placeholder="GB" autocomplete="sizeLimit"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="flex items-center justify-center mt-6 gap-x-6">
+          <button type="submit"
+            class="inline-flex justify-center px-4 py-2 text-base font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Install</button>
+        </div>
+      </form>
     </div>
   </div>
   <script type="module" src="/main.js"></script>
